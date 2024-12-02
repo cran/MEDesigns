@@ -1,0 +1,5 @@
+importFrom("utils", "combn")
+export(CheckME_Diallel)
+export(ME_CDC)
+export(ME_PDC1)
+export(ME_PDC2)
