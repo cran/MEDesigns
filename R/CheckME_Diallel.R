@@ -69,7 +69,7 @@ s<-t(apply(PDC[,2:3],1,sort))
 N_pdc<-nrow(unique(s))
 DF<-N_pdc/N_cdc
 colnames(PDC)<-c("Blocks","Line 1","Line 2")
-list<-list("ME_PDC"=PDC,"Number of lines"=max(c(PDC[,2])),"Number of BLocks"=max(c(PDC[,1])),"Block Size"=length(which(PDC[,1]==1)),"C_matrix"=round(c_mat,3),"EVs"=round(table(e1),3),"CEF"=round(CEF,3),"DF"=round(DF,3))
+list<-list("ME_PDC"=PDC,"Number of lines"=max(c(PDC[,2])),"Number of BLocks"=max(c(PDC[,1])),"Block Size"=length(which(PDC[,1]==1)),"C_matrix"=round(c_mat,3),"EVs"=round(unname(table(e1),3)),"CEF"=round(CEF,3),"DF"=round(DF,3))
 return(list)
 }
 
